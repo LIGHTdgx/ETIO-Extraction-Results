@@ -1,0 +1,41 @@
+﻿the Asian region
+2018/12/14
+The Dropping Elephant actor | Securelist
+By GReAT on July 8, 2016. 5:57 am
+Dropping Elephant (also known as “Chinastrats” and “Patchwork“) is a relatively new threat actor
+that is targeting a variety of high proﬁle diplomatic and economic targets using a custom set of
+attack tools. Its victims are all involved with China’s foreign relations in some way, and are
+generally caught through spear-phishing or watering hole attacks.
+Overall, the activities of this actor show that low investment and ready-made oﬀensive toolsets
+can be very eﬀective when combined with high quality social engineering. We have seen more
+such open source toolset dependency with meterpreter and BeEF, and expect to see this trend
+continue.
+Conclusion
+Campaigns do not always need to be technically advanced to be successful. In this case, a small
+group reusing exploit code, some powershell-based malware and mostly social engineering has
+been able to steal sensitive documents and data from victims since at least November 2015.
+
+Our analysis of the C2 server conﬁrmed the high proﬁle of most victims, mainly based in the Asian
+region and specially focused on Chinese interests. Actually, some hints suggest the group has been
+We use cookies to make your experience of our websites better. By using and further navigating this website you
+accept this. Detailed information about the use of cookies on this website is available by clicking on more
+information.
+2018/12/14
+successful enough to have recently expanded its operations, perhaps after proving its eﬀectiveness
+and the value of the data stolen.
+
+The Dropping Elephant actor | Securelist
+
+This is quite worrying, especially given the fact that no 0 days or advanced techniques were used
+against such high proﬁle targets. Simply applying software patches will prevent attacks based on
+old exploits, as well as training in the most basic social engineering attacks.
+
+However, it should be noted that in this case Microsoft´s patch for exploit CVE-2014-1761 just
+warns the user not to allow the execution of the suspicious ﬁle.
+
+Dropping Elephant artifacts are detected by Kaspersky Lab products as: 
+Exploit.Win32.CVE-2012-0158.* 
+Exploit.MSWord.CVE-2014-1761.* 
+Trojan-Downloader.Win32.Genome.* 
+HEUR:Trojan.Win32.Generic
+

@@ -1,0 +1,21 @@
+﻿The Patchwork attack group has been targeting more than just government-associated organizations. Our research into the group found that it’s been attacking a broad range of industries—including aviation, broadcasting, and Ònance—to drop back door Trojans.
+Symantec Security Response has been actively monitoring Patchwork, also known as Dropping Elephant, which uses Chinese-themed content as bait to compromise its targets’ networks. Two security companies, Cymmetria and Kaspersky, each recently released reports on the campaign, most of which are in line with our observations.As other researchers observed, Patchwork originally targeted governments and government-related organizations. However, the group has since expanded its focus to include a broader range of
+industries.
+While most of the interest still lies in the public sector, more recent attacks were found targeting the following industries:Aviation
+Broadcasting Energy Financial Non-governmental organizations (NGO) Pharmaceutical Public sector Publishing Software
+According to Symantec telemetry, targeted organizations are located in dispersed regions. Although approximately half of the attacks focus on the US, other targeted regions include China, Japan,Southeast Asia, and the United Kingdom.
+Mitigation
+Users should adhere to the following advice to prevent Patchwork’s attacks from succeeding:
+Delete any suspicious-looking emails you receive, especially if they contain links or attachments. Spear-phishing emails are frequently used by cyberespionage attackers as a means of luring
+victims into opening malicious Òles.
+Keep your operating system and other software updated. Software updates will frequently include patches for newly discovered security vulnerabilities which are frequently exploited by
+attackers.
+Keep your security software up to date to protect yourself against any new variants of this malware.
+The .pps Òles likely exploit the Microsoft Windows OLE Package Manager Remote Code Execution Vulnerability (https://www.symantec.com/security_response/vulnerability.jsp?bid=70419) (CVE-2014-
+4114). However, the exploit for this particular campaign is a slight variation of similar exploits observed in the past. The exploit takes advantage of how the patch is designed to only warn users,
+rather than completely prevent malware infections without user interaction.Besides the .pps Òle, the threat actor uses rich text Òles to deliver the malware. While other researchers have reported that these Òles exploit CVE-2012-0158, Symantec has also observed CVE-2015-
+1641 being exploited to drop Backdoor.Steladok (https://www.symantec.com/security_response/writeup.jsp?docid=2016-060613-0635-99).Both the .doc and .pps Òles mainly drop two malware families. Typically, the PowerPoint Slide Òle drops Backdoor.Enfourks, an AutoIT executable which is usually bloated with meaningless data and
+targets mainly 32-bit systems. The .doc Òle drops Backdoor.Steladok.While both back door Trojans wait for commands from the threat actor, they can search for Òles and upload them to the speciÒed server once activated. For unknown reasons, both threats use
+Baidu, the Chinese software vendor, in their routines. The Trojans conÒrm an internet connection by pinging Baidu’s server and create a registry entry with the vendor’s name to run every time
+Windows starts. As two Òle types are used to deliver two di×erent payloads, there are likely multiple individuals or groups contributing to the malware development e×orts.
+

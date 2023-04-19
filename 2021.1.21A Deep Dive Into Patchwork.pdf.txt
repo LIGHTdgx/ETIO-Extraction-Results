@@ -1,0 +1,155 @@
+﻿A Deep Dive Into Patchwork
+APT Group
+
+By cybleinc
+ JAN 20, 2021
+Recently, in January 2021, the research team
+at Cyble observed the Patchwork APT cyber espionage group targeting China
+with a malformed document
+named “Chinese_Pakistani_fighter_planes_play_war_games.docx”. We suspect
+that the attack is executed in the form of spear phishing emails with
+malicious attachments. We discovered that the attack used techniques such as
+exploitation of long-closed vulnerabilities and social engineering campaigns.  
+
+The image below showcases Chinese and Pakistani fighter war games with a
+CVE-2019-0808 exploit code that drops and executes Patchwork APT payloads
+on victim machines. 
+
+Technical Analysis: 
+
+Our analysis is based on a sample that was found in the
+wild on January 18, 2021 with SHA- 256
+7fb7944fb452d8588194ea746910ed782865efb991fa02479e429f8fba677d3b. The
+sample is a malcrafted Microsoft document with an EPS
+script that exploits the CVE-2019-0808 vulnerability. 
+
+CVE-2019-0808 is a privilege elevation vulnerability in the Windows Win32k
+component due to the NULL pointer dereference, which leads to an arbitrary
+code execution as a SYSTEM user. It allows
+
+the attacker to install and run additional payloads on the victim machine with full
+user rights. This APT group implants an extracted EPS script dropped
+and executed by the malicious document. The following image
+shows the content of the EPS file with the icon.  
+
+
+The malcrafted EPS scripts drops a Patchwork payload file named
+“MSBuild.exe” with SHA256-
+446e00a53014006804135ef1c31dac6837c0cf635c26426e396b3067764f956d in t
+he path of the infected host as highlighted below. This is a VC+ compiled file
+with encrypted data, which decrypts and loads the Windows API function
+dynamically during runtime. 
+
+File Path- %Users%\%AppData%\Roaming\Microsoft\Windows\Start
+Menu\Programs\Startup folder 
+
+Interestingly, the payload file has a hardcoded command and control (C2) server
+IP, URL and User agent as shown in the image below. 
+
+Upon execution, this file creates a Mutex named
+“asssszxxzcccjdddddccccdjjjddssdfgredf ” to mark its presence on the victim
+machine and avoid multiple executions of itself as shown in the process explorer
+image below. 
+
+The malware payload starts collecting information from the victim
+system such as computer name, comspec, home directory, logon
+server, the number of processors, and much more using Windows API such
+as GetComputerNameA, GetTempPath, and GetConsoleWindow.
+The image below shows the system information collected during our analysis. 
+The following image shows the stack data, which includes collected system
+information such as a universally unique identifier (UUID), username
+(#un), computer name (#cn), IP address (#lan), number of processor (#nop) and
+version (#ver) along with the C2 IP.  
+
+The Patchwork payload logs keystrokes, screenshots, and running processes with
+date and time and stores them in a file named TPX498.dat, in a %Temp% folders.
+The image below depicts the contents of the keylogger data file. The payload file
+also drops an 9PT568.dat file with ID:e29ac6c0-7037-11de-816d-
+806e6f6e69638e6d which might be used for network data encryption. 
+
+Then malware uses the custom encryption logic to encode data and
+send it to the C2 server over HTTP communication, as depicted in the Wireshark
+image below. The multiple process threads of MSBuild.exe are responsible for
+sharing encoded stolen data in a POST request to the server. Each request body
+of the POST request ends with a unique identification value &crc=e3a6. 
+
+MITRE ATT&CK Framework: 
+
+ID 
+
+Description 
+
+Use 
+
+T1548.001 
+
+Abuse Elevation Control
+Mechanism: Bypass User
+Account Control 
+
+Uses CVE-2019-0808, a privilege
+elevation vulnerability in Windows
+Win32k component 
+
+T1560.006 
+
+Command and Scripting
+Interpreter: EPS script  
+
+Uses the EPS script to deliver payload. 
+
+T1560 
+
+T1119 
+
+Archive Collected Data 
+
+Automated Collection 
+
+T1547.001 
+
+Boot or
+Logon Autostart Execution:
+Image File
+Execution Options Registry
+Keys / Startup Folder     
+
+Encrypts the collected files path with
+AES and then encodes them with
+base64. 
+
+Develops a file stealer to
+search the C:\ folder and collect files
+with certain extensions, executes a
+script to enumerate all drives,
+store them as a list,
+and uploads the generated files to the
+C2 server. 
+
+It has added the path of its second-
+stage malware to the startup folder to
+achieve persistence. One of its file
+stealers has also persisted by
+adding an Image File Execution
+Options Registry key. 
+
+T1566.001 
+
+Phishing: Spearphishing
+Attachment 
+
+Uses spear phishing with an
+attachment to deliver files with
+exploits to initial victims. 
+
+T1203 
+
+Exploitation for Client
+Execution 
+
+Uses malicious documents to deliver
+remote execution exploits. The group
+has used CVE-2019-0808. 
+
+500K+ Records of C-level Individuals Allegedly Leaked on the
+Darkweb 

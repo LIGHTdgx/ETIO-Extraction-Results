@@ -1,0 +1,11 @@
+By Jasper Manuel and Artem Semenchenko | April 05, 2017
+Three weeks ago, FortiGuard Labs, along with @_ddoxer (Roland de la Paz), using VirusTotal Intelligence queries, spotted a document with
+the politically themed file name “Senate_panel.doc”. This malicious RTF file takes advantage of the vulnerability CVE-2015-1641. Upon
+successful exploitation, it drops a malware in the %appdata%⧵Microsoft directory. To evade suspicion by the victim, it also drops a decoy
+document which shows the symbol of the Ministry of Foreign Affairs of Pakistan on the first page, but on the next pages shows an article
+about the Senate of Pakistan.BADNEWS backdoor is not a sophisticated piece of malware. In fact, it doesn’t use any new malware techniques at all. It is neither packed
+nor heavily obfuscated. Its tring obfuscation is just simple reversing and minus 1 encryption. But, it uses proven techniques to bypass the
+HIPS detection used by security programs by piggybacking onto a signed legitimate file, which allows it to deliver its malicious payload. It
+also proves, once again, that there’s rarely any need to use stealthier or more sophisticated attacks, because simple techniques work.
+Bad news though for the bad guys, and good news for our customers, as Fortinet covers detection for the BADNEWS backdoor as
+W32/Bdnews.A!tr.bdr and the malicious RTF as MSOffice/CVE_2015_1641.A!exploit.

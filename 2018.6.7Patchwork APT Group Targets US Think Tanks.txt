@@ -1,0 +1,21 @@
+In March and April 2018, Volexity identified multiple spear phishing campaigns attributed to Patchwork, an Indian APT group also known as
+Dropping Elephant. This increase in threat activity was consistent with other observations documented over the last few months in blogs by
+360 Threat Intelligence Center analyzing attacks on Chinese organizations and Trend Micro noting targets in South Asia. From the attacks
+observed by Volexity, what is most notable is that Patchwork has pivoted its targeting and has launched attacks directly against US-based
+think tanks. Volexity has also found that, in addition to sending malware lures, the Patchwork threat actors are leveraging unique tracking
+links in their e-mails for the purpose of identifying which recipients opened their e-mail messages.
+In three observed spear phishing campaigns, the threat actors leveraged domains and themes mimicking those of well-known think tank
+organizations in the United States. The group lix ed articles and themes from the Council on Foreign Relations (CFR), the Center for Strategic
+and International Studies (CSIS), and the Mercator Institute for China Studies (MERICS) for use in their spear phishing lures and malicious
+Rich Text Format (RTF) documents. Strangely, in one case, the threat actors also appear to have used a domain name similar to the Foreign
+Policy Research Institute (FPRI) in a message purporting to be from CFR. Each of the spear phishing attacks contained links to .doc files,which were really RTF documents that attempt to exploit CVE-2017-8750 (Composite Moniker). The threat actors appear to have leveraged
+publicly available exploit code that can be found on Github at the URL: https://github.com/rxwx/CVE-2017-8570. If the exploit is successful,
+the threat actors will attempt to drop and execute QuasarRAT. Details of the malware and the associated attacks are listed below.The addition of US-based think tanks to the list of organizations in the crosshairs of Patchwork shows an increasing diversity in the
+geographic regions being targeted. While there were a few peculiar components to some of the spear phish messages, the campaigns and
+themes were strategically relevant to the organizations being targeted. The Patchwork threat actors also appear to have adopted a
+technique seen from other APT groups where they are now tracking the ew ectiveness of their campaigns by recording which recipients have
+opened the phishing message. This information allows a threat actor to determine if their messages were delivered, which users are more
+susceptible to opening them, and basic information regarding the target’s operating system and e-mail client (or browser). Finally, although
+the payload observed being delivered by Patchwork in these campaigns is a readily available open source RAT, it does allow for flexibility in
+interacting with compromised machines without needing to use custom malware. Volexity is actively tracking this group and the
+infrastructure currently in use for the benefit of its network security monitoring and threat intelligence customers.

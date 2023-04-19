@@ -1,0 +1,30 @@
+In the past few months, Unit 42 has observed the Patchwork (h ps://s3‐us‐west‐2.amazonaws.com/cymmetria‐
+blog/public/Unveiling_Patchwork.pdf) group, alternaঞ vely known as Dropping Elephant (h ps://securelist.com/the‐dropping‐
+elephant‐actor/75328/) and Monsoon (h ps://www.forcepoint.com/sites/default/files/resources/files/forcepoint‐security‐labs‐
+monsoon‐analysis‐report.pdf), conducঞ ng campaigns against targets located in the Indian subconঞ nent. Patchwork threat actors
+uঞ lized a pair of EPS exploits rolled into legiঞ mate, albeit malicious, documents in order to propagate their updated BADNEWS
+(h ps://www.forcepoint.com/sites/default/files/resources/files/forcepoint‐security‐labs‐monsoon‐analysis‐report.pdf) payload.
+The use of weaponized legiঞ mate documents is a longstanding operaঞ onal standard of this group.
+The malicious documents seen in recent acঞ vity refer to a number of topics, including recent military promoঞ ons within the
+Pakistan Army, informaঞ on related to the Pakistan Atomic Energy Commission, as well as Pakistan’s Ministry of the Interior.
+The BADNEWS malware payload, which these malicious documents ulঞ mately deliver, has been updated since the last public
+(h ps://documents.trendmicro.com/assets/tech‐brief‐untangling‐the‐patchwork‐cyberespionage‐group.pdf) report in December
+2017. BADNEWS acts as a backdoor for the a ackers, providing them with full control over the vicঞ m machine. It has
+historically leveraged legiঞ mate third‐party websites to host the malware’s command and control (C2) informaঞ on, acঞ ng as
+“dead drops”. A[ er the C2 informaঞ on has been collected, BADNEWS leverages HTTP for communicaঞ on with the remote
+servers.
+We’ve observed modificaঞ ons to how the malware obtains its (C2) server informaঞ on, as well as modificaঞ ons to the C2
+communicaঞ on. These changes to BADNEWS, as well as the use of recent EPS‐based exploits, demonstrate that the group are
+acঞ vely updaঞ ng their toolsets in efforts to stay ahead of the security community.The Patchwork group conঞ nues to plague vicঞ ms located within the Indian subconঞ nent. Through the use of relaঞ vely new
+exploits, as well as a constantly evolving malware toolset, they aim to compromise prominent organizaঞ ons and individuals to
+further their goals. Recent acঞ vity has shown a number of lures related to the Pakistan Army, the Pakistan Atomic Energy
+Commission, as well as the Ministry of the Interior.
+One of the malware families ঞ ed to this group, BADNEWS, conঞ nues to be updated both in how it uses dead drop resolvers, as
+well as how it communicates with a remote C2 server.
+Palo Alto Networks customers are protected against this threat in a number of ways:
+Traps blocks the exploit documents witnessed during this campaign
+WildFire accurately idenঞ fies the samples menঞ oned in this blog as malicious
+The Patchwork (h ps://autofocus.paloaltonetworks.com/#/tag/Unit42.Patchwork) and BADNEWS
+(h ps://autofocus.paloaltonetworks.com/#/tag/Unit42.BadNews) tags in AutoFocus may be used for conঞ nued monitoring
+and tracking of this threat.
+Addiঞ onally, the providers being used for dead drops have been noঞ fied.

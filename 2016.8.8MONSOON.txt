@@ -1,0 +1,49 @@
+MONSOON is the name given to the Forcepoint Security Labs™
+investigation into an ongoing espionage campaign that the Special
+Investigations team have been tracking and analysing since May 2016. 
+The overarching campaign appears to target both Chinese nationals
+within different industries and government agencies in Southern Asia. It
+appears to have started in December 2015 and is still ongoing as of July
+2016.
+Amongst the evidence gathered during the MONSOON investigation were 
+a number of indicators which make it highly probable1 that this adversary 
+and the OPERATION HANGOVER [1], [2] adversary are one and the 
+same. These indicator include the use of the same infrastructure for the 
+attacks, similar Tactics, Techniques and Procedures (TTPs), the targeting 
+of demographically similar victims and operating geographically within the 
+Indian Subcontinent.
+The malware components used in MONSOON are typically distributed through weaponised documents
+sent through e-mail to specifically chosen targets. Themes of these documents are usually political in
+nature and taken from recent publications on topical current affairs. Several malware components have
+been used in this operation including Unknown Logger Public, TINYTYPHON, BADNEWS, and an AutoIt
+[3] backdoor.
+BADNEWS is particularly interesting, containing resilient command-and-control (C&C) capability using RSS
+feeds, Github, forums, blogs and Dynamic DNS hosts.
+This whitepaper provides an in-depth understanding and insight into the actors and their campaign. It
+includes detailed analysis and findings, previously undocumented malware components, victims, and
+infrastructure involved.KEY FEATURES
+Adversary. Strong indication that this is conducted by
+the OPERATION HANGOVER group [1].
+This group has been active since at least 2010 [2].
+Intent. Data Exfiltration.
+Infrastructure. Non-traditional resilient and obscure
+C&C. Including GitHub, forums, news items and RSS 
+feeds.
+Capability. BADNEWS and TINYTYPHON malware.
+Re-use of tool sets including: Metasploit, AutoIt 
+Backdoor, MyDoom, Shellcode loading via Powershell, 
+Unknown Logger. “PATCHWORK” [4].
+CVE Exploitation.
+Current News Lures – Lures via email with tracking 
+images.
+Over 172 lure documents, most referencing topical news 
+items, relevant to the victims of interest. Most common 
+lure document: 2016_China_Military_PowerReport.
+Victims. Over 110 different victim countries and 6,300 
+victim IP addresses.
+Victims of Interest. Government Agencies, Armed 
+Forces, Embassies: Sri Lanka, Ceylon, South Korean,
+Victim of Opportunity. Those with passing interest in 
+Chinese military strategy being ‘snared’ by the lure web 
+site. Majority in China (61% of all victims)
+Timeframe. Between December 2015 to July 2016
