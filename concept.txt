@@ -1,0 +1,8 @@
+{"concept": "ChatGPT", "property": "can be used to scrape sensitive information from the internet, such as personal or financial data"},
+(Cybersecurity,attack weapon, privacy risk, fake news, public opinion problems, social stability, threat intelligence, mitigation recommendations, phishing emails, decryption of encrypted data, network attacks, espionage, ransomware, malicious spam, illegal activities, AI-generated content detection technology
+(weaponization of ChatGPT,assist in cyberattacks and cybersecurity defense
+(generating detection scripts,strict content security policies make ChatGPT actively refuse to generate cybersecurity-related scripts
+{"concept": "IT and security teams", "properties": "improve efficiency, automated and/or semi-automated vulnerability detection and remediation, risk-based prioritization, analyze and interpret large amounts of data"},
+ (AI threats, Vulnerability detection)
+ (AI threats, Credential leakage detection)
+ (AI threats, Evasion of intrusion detection systems)
