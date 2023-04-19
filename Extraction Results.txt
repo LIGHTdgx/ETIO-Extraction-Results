@@ -1,0 +1,113 @@
+1{
+  "Timestamp": "",
+  "Target Asset Name": "Patchwork attack group",
+  "Target Asset Type": "LINK,Data",
+  "Target Asset Owner Name": "",
+  "Target Asset Owner Type": "Organization",
+  "Tactical Objective": "DataTheft,Control",
+  "Strategic Objective": "",
+  "ATT/CK Stage": "Initial Acess,Execution,Persistence,Defense Evasion,Collection,Command and Control,Exfiltration",
+  "Vulnerability ID": "CVE-2014-4114, CVE-2015-1641",
+  "Network Tool Name": "Backdoor.Enfourks, Backdoor.Steladok"
+  "Response Measures Description": "installing/updating antivirus software,improving email precautions"
+}
+
+2{
+  "Timestamp": "Late May 2016",
+  "Target Asset Name": "Employee working on Chinese policy research",
+  "Target Asset Type": "Data",
+  "Target Asset Owner Name": "Government organization in Europe",
+  "Target Asset Owner Type": "Organization",
+  "Tactical Objective": "DataTheft,Control",
+  "Strategic Objective": "Political Purpose",
+  "ATT/CK Stage": "Reconnaissance,Initial Acess,Execution,Persistence,Defense Evasion,Discovery,Collection,Command and Control,Exfiltration",
+  "Vulnerability ID": "CVE-2014-4114",
+  "Network Tool Name": "UACME, PowerSploit, Meterpreter, MetaSploit, AutoIt"
+  "Response Measures Description": ""
+}
+
+#3{
+  "Timestamp": "July 8, 2016. 5:57 am",
+  "Target Asset Name": "High Proﬁle Diplomatic and Economic Targets",
+  "Target Asset Type": "Data",
+  "Target Asset Owner Name": "Dropping Elephant",
+  "Target Asset Owner Type": "Organization",
+  "Tactical Objective": "DataTheft",
+  "Strategic Objective": "Political Purpose",
+  "ATT/CK Stage": "Execution,Collection,Command and Control",
+  "Vulnerability ID": "CVE-2012-0158,CVE-2014-1761",
+  "Network Tool Name": "Custom Set of Attack Tools"
+  "Response Measures Description": "\"
+}
+
+4{
+  "Timestamp": "July 2016",
+  "Target Asset Name": "MONSOON",
+  "Target Asset Type": "Data",
+  "Target Asset Owner Name": "OPERATION HANGOVER",
+  "Target Asset Owner Type": "Organization",
+  "Tactical Objective": "DataTheft,Control",
+  "Strategic Objective": "Political Purpose",
+  "ATT/CK Stage": "Reconnaissance,Initial Acess,Execution,Persistence,Defense Evasion,Discovery,Collection,Command and Control,Exfiltration",
+  "Vulnerability ID": "",
+  "Network Tool Name": "Metasploit, AutoIt Backdoor, MyDoom, Shellcode loading via Powershell, Unknown Logger"
+  "Response Measures Description": ""
+}
+
+5{
+  "Timestamp": "April 05, 2017",
+  "Target Asset Name": "Senate_panel.doc",
+  "Target Asset Type": "Data",
+  "Target Asset Owner Name": "FortiGuard Labs",
+  "Target Asset Owner Type": "Organization",
+  "Tactical Objective": "Control",
+  "Strategic Objective": "Political Purpose",
+  "ATT/CK Stage": "Initial Acess,Execution,Persistence,Defense Evasion",
+  "Vulnerability ID": "CVE-2015-1641",
+  "Network Tool Name": "VirusTotal Intelligence"
+  "Response Measures Description": "\"
+}
+
+6{
+  "Timestamp": "",
+  "Target Asset Name": "Patchwork, Dropping Elephant, Monsoon, BADNEWS",
+  "Target Asset Type": "LINK,Service,Data",
+  "Target Asset Owner Name": "Unit 42",
+  "Target Asset Owner Type": "Organization",
+  "Tactical Objective": "Control",
+  "Strategic Objective": "Demonstrating Strength",
+  "ATT/CK Stage": "Reconnaissance,Resource Development,Initial Acess,Execution,Persistence,Defense Evasion,Discovery,Collection,Command and Control",
+  "Vulnerability ID": "",
+  "Network Tool Name": "EPS exploits, HTTP, WildFire, AutoFocus"
+  "Response Measures Description": "\"
+}
+
+7{
+  "Timestamp": "March and April 2018",
+  "Target Asset Name": "Council on Foreign Relations (CFR), Center for Strategic and International Studies (CSIS), Mercator Institute for China Studies (MERICS), Foreign Policy Research Institute (FPRI)",
+  "Target Asset Type": "LINK,Data",
+  "Target Asset Owner Name": "Patchwork",
+  "Target Asset Owner Type": "Organization",
+  "Tactical Objective": "Control",
+  "Strategic Objective": "Political Purpose",
+  "ATT/CK Stage": "Reconnaissance,Resource Development,Initial Acess,Execution,Defense Evasion,Discovery,Collection,Command and Control",
+  "Vulnerability ID": "CVE-2017-8750",
+  "Network Tool Name": "QuasarRAT"
+  "Response Measures Description": "patching,improving email precautions"
+}
+
+8{
+  "Timestamp": "",
+  "Target Asset Name": "Chinese_Pakistani_fighter_planes_play_war_games.docx",
+  "Target Asset Type": "Data",
+  "Target Asset Owner Name": "Patchwork APT Group",
+  "Target Asset Owner Type": "Organization",
+  "Tactical Objective": "DataTheft",
+  "Strategic Objective": "",
+  "ATT/CK Stage": "Initial Acess,Execution,Persistence,Defense Evasion,Discovery,Collection,Command and Control,Exfiltration",
+  "Vulnerability ID": "CVE-2019-0808",
+  "Network Tool Name": "MSBuild.exe"
+  "Response Measures Description": "\"
+}
+
+
