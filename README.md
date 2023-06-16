@@ -1,11 +1,15 @@
 # ETIO-Extraction-Results
 ### 该项目包含了论文“Event-based Threat Intelligence Ontology Model”中的部分数据
 
-1）**concept.txt**包含了约简后的形式概念集（选取keys=4时）
+1）**包含了8篇“白象”组织的APT报告原始数据
 
-2）**Extraction Results.txt**包含了对8篇“白象”组织的APT报告进行信息抽取后的结果
+2）**concept.txt**包含了约简后的形式概念集（选取keys=4时）
+
+3）**Extraction Results.txt**包含了对8篇“白象”组织的APT报告进行信息抽取后的结果
 
 ### 下面是信息抽取过程中使用的*prompt*示例 
+
+**形式概念抽取**
 
 `prompt='Now that you are an expert in the field of cybersecurity, please extract (concepts,properties) tuple related to the cyber attack from the following text, and represent them line-by-line in json format.\n text:'`
 
@@ -24,7 +28,7 @@ If you are using ETIO for your work, please kindly cite our paper:
 
 `@article{
   title={Event-based threat intelligence ontology},
-  author={Wang P, Dai Guangxiang, Zhai Lidong},
+  author={Wang Peng, Dai Guangxiang, Zhai Lidong},
   coference={Scicec 2023},
   year={2023}
 }`
